@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-jvalue",
+  "name": "@jvalue/eslint-config-jvalue",
   "keywords": [
     "eslint",
     "eslint-config"
