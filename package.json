@@ -1,20 +1,21 @@
 {
   "name": "@jvalue/eslint-config-jvalue",
+  "version": "1.0.1",
+  "license": "Apache-2.0",
   "keywords": [
     "eslint",
     "eslint-config"
   ],
-  "version": "1.0.0",
-  "description": "",
+  "description": "The eslint config reused in JValue projects.",
+  "author": "JValue team",
+  "homepage": "https://github.com/jvalue/jvalue-eslint#readme",
+  "bugs": {
+    "url": "https://github.com/jvalue/jvalue-eslint/issues"
+  },
   "main": "index.js",
-  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jvalue/jvalue-eslint.git"
-  },
-  "author": "JValue team",
-  "bugs": {
-    "url": "https://github.com/jvalue/jvalue-eslint/issues"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.28.4",
@@ -26,6 +27,5 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-promise": "^5.1.0",
     "prettier": "^2.3.2"
-  },
-  "homepage": "https://github.com/jvalue/jvalue-eslint#readme"
+  }
 }
