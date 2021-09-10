@@ -7,9 +7,20 @@ The eslint config reused in JValue projects.
 Install via `npm install --save-dev @jvalue/eslint-config-jvalue`.
 
 **.eslintrc** file:
+
+### Typescript
+
 ```javascript
 {
     "extends": "@jvalue/eslint-config-jvalue"
+}
+```
+
+### VueJS
+
+```javascript
+{
+    "extends": "@jvalue/eslint-config-jvalue/vue"
 }
 ```
 
