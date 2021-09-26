@@ -8,14 +8,14 @@
   ],
   "description": "The eslint config reused in JValue projects.",
   "author": "JValue team",
-  "homepage": "https://github.com/jvalue/jvalue-eslint#readme",
+  "homepage": "https://github.com/jvalue/eslint-config-jvalue#readme",
   "bugs": {
-    "url": "https://github.com/jvalue/jvalue-eslint/issues"
+    "url": "https://github.com/jvalue/eslint-config-jvalue/issues"
   },
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jvalue/jvalue-eslint.git"
+    "url": "git+https://github.com/jvalue/eslint-config-jvalue.git"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.28.4",
