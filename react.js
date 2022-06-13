@@ -15,7 +15,7 @@ module.exports = {
       },
     },
     {
-      files: ['*.ts', '*.vue'],
+      files: ['*.ts', '*.tsx'],
       parserOptions: {
         project: './tsconfig.json',
       },
@@ -25,6 +25,8 @@ module.exports = {
         'plugin:import/typescript',
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        'react-app',
+        'plugin:react/recommended',
         'plugin:prettier/recommended',
       ],
       rules: {
@@ -132,42 +134,29 @@ module.exports = {
             requireStringLiterals: true,
           },
         ],
-      },
-    },
-    {
-      // This part of the config specifically targets Vue files only. It gets merged with the previous one.
-      files: ['*.vue'],
-      parser: 'vue-eslint-parser',
-      env: {
-        'vue/setup-compiler-macros': true,
-      },
-      extends: [
-        'plugin:vue/vue3-recommended',
-        '@vue/typescript/recommended',
-        'plugin:prettier/recommended',
-      ],
-      rules: {
-        'prettier/prettier': 'warn',
 
-        // In Vue components and UI development in general, it is relatively common to first read/write an object (e.g. current State), then to make an HTTP request and then to assign some properties of this object based on the response.
-        'require-atomic-updates': [
+        'react/button-has-type': 'error',
+        'react/destructuring-assignment': ['warn', 'never'],
+        'react/function-component-definition': [
           'error',
-          {
-            allowProperties: true,
-          },
+          { namedComponents: 'arrow-function' },
         ],
-
-        'vue/html-button-has-type': 'error',
-        'vue/html-self-closing': [
+        'react/hook-use-state': 'error',
+        'react/jsx-boolean-value': 'warn',
+        'react/jsx-fragments': ['warn', 'element'],
+        'react/jsx-sort-props': [
           'warn',
           {
-            html: {
-              void: 'always',
-              normal: 'never',
-              component: 'always',
-            },
+            noSortAlphabetically: true,
+            reservedFirst: true,
+            shorthandLast: true,
+            callbacksLast: true,
           },
         ],
+        'react/no-array-index-key': 'error',
+        'react/no-unstable-nested-components': 'error',
+        'react/self-closing-comp': ['warn', { html: false }],
+        'react/void-dom-elements-no-children': 'error',
       },
     },
   ],
