@@ -243,7 +243,9 @@ You will notice that the rules found in these three files are in many places jus
 
 ### Testing
 
-Before publishing a new config, it is highly recommended that you test it in a project to determine if the config really matches your expectations. A suggestion: Create a new TypeScript/React/Vue project in a directory outside of `eslint-config-jvalue`. Now, you can symlink `eslint-config-jvalue` in your `package.json` using something like `"@jvalue/eslint-config-jvalue": "file:../(path-to-the-eslint-config-folder)"` as a devDependency. However, this might lead to issues in some setups. Instead, and in order to better predict the actual package structure, it is recommended to do the following:
+Before publishing a new config, it is highly recommended that you test it in a project to determine if the config really matches your expectations. A suggestion: Create a new TypeScript/React/Vue project in a directory outside of `eslint-config-jvalue`. Here, you can import your local eslint config and test if it works properly.
+
+To import the eslint config, you could simply symlink `eslint-config-jvalue` in your `package.json` using something like `"@jvalue/eslint-config-jvalue": "file:../(path-to-the-eslint-config-folder)"` as a devDependency. However, this might lead to issues in some setups. Instead, and in order to better predict the actual package structure, it is recommended to do the following:
 
 1. In the `eslint-config-jvalue` folder, run `npm pack`. This will create a `.tgz` file.
 2. In your test project, run `npm install --save-dev ../(path-to-the-eslint-config-folder)/the-tgz-file.tgz` (substituting `(path-to-the-eslint-config-folder)` with the actual path, and `the-tgz-file.tgz` with the name of the file created in the previous step)
