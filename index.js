@@ -1,8 +1,7 @@
 module.exports = {
   root: true,
-  parser: '@typescript-eslint/parser',
-  env: {
-    node: true,
+  parserOptions: {
+    ecmaVersion: 2022,
   },
   reportUnusedDisableDirectives: true,
   overrides: [
@@ -16,15 +15,13 @@ module.exports = {
       },
     },
     {
-      files: ['*.ts', '*.tsx'],
+      files: ['*.ts'],
       parserOptions: {
         project: './tsconfig.json',
       },
-      plugins: ['@typescript-eslint', 'prettier'],
       extends: [
         'eslint:recommended',
-        'plugin:import/errors',
-        'plugin:import/warnings',
+        'plugin:import/recommended',
         'plugin:import/typescript',
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
@@ -33,6 +30,19 @@ module.exports = {
       rules: {
         'prettier/prettier': 'warn',
 
+        '@typescript-eslint/array-type': [
+          'warn',
+          {
+            default: 'array-simple',
+            readonly: 'generic',
+          },
+        ],
+        '@typescript-eslint/consistent-type-assertions': [
+          'error',
+          {
+            assertionStyle: 'as',
+          },
+        ],
         '@typescript-eslint/consistent-type-definitions': [
           'error',
           'interface',
@@ -57,9 +67,11 @@ module.exports = {
             format: ['PascalCase'],
           },
         ],
-
-        'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-        'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+        '@typescript-eslint/no-unnecessary-condition': 'error',
+        '@typescript-eslint/prefer-for-of': 'error',
+        '@typescript-eslint/prefer-includes': 'error',
+        '@typescript-eslint/prefer-string-starts-ends-with': 'error',
+        '@typescript-eslint/strict-boolean-expressions': 'error',
 
         'accessor-pairs': 'error',
         'array-callback-return': 'error',
@@ -67,7 +79,7 @@ module.exports = {
         curly: 'error',
         'default-case-last': 'error',
         'default-param-last': 'error',
-        'dot-notation': 'error',
+        'dot-notation': 'warn',
         eqeqeq: ['error', 'always', { null: 'never' }],
         'guard-for-in': 'error',
         'no-constructor-return': 'error',
@@ -83,9 +95,16 @@ module.exports = {
         ],
         'no-self-compare': 'error',
         'no-throw-literal': 'error',
+
+        // See https://github.com/typescript-eslint/typescript-eslint/issues/1041
+        'no-unreachable': 'error',
+
         'no-useless-rename': 'error',
         'no-useless-return': 'error',
+        'import/first': 'warn',
+        'import/newline-after-import': 'warn',
         'import/no-cycle': 'error',
+        'import/no-unresolved': ['error'],
         'import/order': [
           'warn',
           {
@@ -94,6 +113,7 @@ module.exports = {
               order: 'asc',
               caseInsensitive: true,
             },
+            warnOnUnassignedImports: true,
           },
         ],
         'no-unreachable-loop': 'error',
