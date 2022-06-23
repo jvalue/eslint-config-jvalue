@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.2.0 (Upcoming)
+## 1.2.0 (2022-06-23)
 
 - Make the existing rules more strict.
 - Introduce a separate config for React.
