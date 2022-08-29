@@ -2,9 +2,18 @@
 
 The eslint config reused across JValue projects.
 
+Our general goals of linting are:
+
+- Avoiding common code errors
+- Improving the overall type safety
+- Having uniform code formatting
+- Avoiding unnecessary code complexity
+
+Furthermore, we strive to avoid rules that are overly restrictive and do not contribute to the goals above.
+
 ## How to use
 
-You essentially need to perform the following steps (they will be explained in more details in the following sections):
+You essentially need to perform the following steps (they will be explained in more detail in the following sections):
 
 1. Install this package
 2. Install required additional packages
@@ -170,7 +179,7 @@ In a Vue+TypeScript project, use the following instead:
 
 ### VSCode extensions
 
-If you are using VSCode, we recommend to install the following extensions:
+If you are using VSCode, we recommend installing the following extensions:
 
 - [vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
