@@ -10,7 +10,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      # Note: Currently only publishing to NPM since GitHub does not allow unauthenticated access to public packages!
       - name: Setup node
         uses: actions/setup-node@v1
         with:
@@ -22,13 +21,12 @@ jobs:
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          
+
   publish-npmgh:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      # Note: Currently only publishing to NPM since GitHub does not allow unauthenticated access to public packages!
       - name: Setup node
         uses: actions/setup-node@v1
         with:
