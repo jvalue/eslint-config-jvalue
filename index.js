@@ -30,13 +30,6 @@ module.exports = {
       rules: {
         'prettier/prettier': 'warn',
 
-        '@typescript-eslint/array-type': [
-          'warn',
-          {
-            default: 'array-simple',
-            readonly: 'generic',
-          },
-        ],
         '@typescript-eslint/consistent-type-assertions': [
           'error',
           {
@@ -76,7 +69,6 @@ module.exports = {
 
         'accessor-pairs': 'error',
         'array-callback-return': 'error',
-        'capitalized-comments': ['warn', 'always'],
         curly: 'error',
         'default-case-last': 'error',
         'default-param-last': 'error',
