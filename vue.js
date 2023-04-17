@@ -30,13 +30,6 @@ module.exports = {
       rules: {
         'prettier/prettier': 'warn',
 
-        '@typescript-eslint/array-type': [
-          'warn',
-          {
-            default: 'array-simple',
-            readonly: 'generic',
-          },
-        ],
         '@typescript-eslint/consistent-type-assertions': [
           'error',
           {
@@ -72,10 +65,10 @@ module.exports = {
         '@typescript-eslint/prefer-includes': 'error',
         '@typescript-eslint/prefer-string-starts-ends-with': 'error',
         '@typescript-eslint/strict-boolean-expressions': 'error',
+        '@typescript-eslint/switch-exhaustiveness-check': 'warn',
 
         'accessor-pairs': 'error',
         'array-callback-return': 'error',
-        'capitalized-comments': ['warn', 'always'],
         curly: 'error',
         'default-case-last': 'error',
         'default-param-last': 'error',
@@ -95,10 +88,6 @@ module.exports = {
         ],
         'no-self-compare': 'error',
         'no-throw-literal': 'error',
-
-        // See https://github.com/typescript-eslint/typescript-eslint/issues/1041
-        'no-unreachable': 'error',
-
         'no-useless-rename': 'error',
         'no-useless-return': 'error',
         'import/first': 'warn',
