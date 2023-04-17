@@ -88,10 +88,6 @@ module.exports = {
         ],
         'no-self-compare': 'error',
         'no-throw-literal': 'error',
-
-        // See https://github.com/typescript-eslint/typescript-eslint/issues/1041
-        'no-unreachable': 'error',
-
         'no-useless-rename': 'error',
         'no-useless-return': 'error',
         'import/first': 'warn',
