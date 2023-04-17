@@ -72,6 +72,7 @@ module.exports = {
         '@typescript-eslint/prefer-includes': 'error',
         '@typescript-eslint/prefer-string-starts-ends-with': 'error',
         '@typescript-eslint/strict-boolean-expressions': 'error',
+        '@typescript-eslint/switch-exhaustiveness-check': 'warn',
 
         'accessor-pairs': 'error',
         'array-callback-return': 'error',
